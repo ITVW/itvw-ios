@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		297B99931CD8650000BB30CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297B99921CD8650000BB30CE /* AppDelegate.swift */; };
-		297B99951CD8650000BB30CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297B99941CD8650000BB30CE /* ViewController.swift */; };
+		297B99951CD8650000BB30CE /* VWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297B99941CD8650000BB30CE /* VWViewController.swift */; };
 		297B99981CD8650000BB30CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297B99961CD8650000BB30CE /* Main.storyboard */; };
 		297B999A1CD8650000BB30CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297B99991CD8650000BB30CE /* Assets.xcassets */; };
 		297B999D1CD8650000BB30CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297B999B1CD8650000BB30CE /* LaunchScreen.storyboard */; };
 		297B99A81CD8650000BB30CE /* ITVWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297B99A71CD8650000BB30CE /* ITVWTests.swift */; };
 		297B99B31CD8650000BB30CE /* ITVWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297B99B21CD8650000BB30CE /* ITVWUITests.swift */; };
+		29BCFE9C1CD990370020FC34 /* VWCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCFE9B1CD990370020FC34 /* VWCollectionViewController.swift */; };
+		29BCFE9E1CD995C70020FC34 /* VWCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCFE9D1CD995C70020FC34 /* VWCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		297B998F1CD8650000BB30CE /* ITVW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITVW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297B99921CD8650000BB30CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		297B99941CD8650000BB30CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		297B99941CD8650000BB30CE /* VWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWViewController.swift; sourceTree = "<group>"; };
 		297B99971CD8650000BB30CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		297B99991CD8650000BB30CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		297B999C1CD8650000BB30CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		297B99AE1CD8650000BB30CE /* ITVWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITVWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		297B99B21CD8650000BB30CE /* ITVWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITVWUITests.swift; sourceTree = "<group>"; };
 		297B99B41CD8650000BB30CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29BCFE9B1CD990370020FC34 /* VWCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VWCollectionViewController.swift; sourceTree = "<group>"; };
+		29BCFE9D1CD995C70020FC34 /* VWCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VWCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				297B99921CD8650000BB30CE /* AppDelegate.swift */,
-				297B99941CD8650000BB30CE /* ViewController.swift */,
+				297B99941CD8650000BB30CE /* VWViewController.swift */,
+				29BCFE9B1CD990370020FC34 /* VWCollectionViewController.swift */,
+				29BCFE9D1CD995C70020FC34 /* VWCollectionViewCell.swift */,
 				297B99961CD8650000BB30CE /* Main.storyboard */,
 				297B99991CD8650000BB30CE /* Assets.xcassets */,
 				297B999B1CD8650000BB30CE /* LaunchScreen.storyboard */,
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				297B99951CD8650000BB30CE /* ViewController.swift in Sources */,
+				29BCFE9C1CD990370020FC34 /* VWCollectionViewController.swift in Sources */,
+				29BCFE9E1CD995C70020FC34 /* VWCollectionViewCell.swift in Sources */,
+				297B99951CD8650000BB30CE /* VWViewController.swift in Sources */,
 				297B99931CD8650000BB30CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +490,7 @@
 				297B99B91CD8650000BB30CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		297B99BA1CD8650000BB30CE /* Build configuration list for PBXNativeTarget "ITVWTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +499,7 @@
 				297B99BC1CD8650000BB30CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		297B99BD1CD8650000BB30CE /* Build configuration list for PBXNativeTarget "ITVWUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +508,7 @@
 				297B99BF1CD8650000BB30CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
