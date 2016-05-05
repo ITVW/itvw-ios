@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293FCBAA1CDAEF3A00410DED /* VWCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293FCBA91CDAEF3A00410DED /* VWCollectionViewFlowLayout.swift */; };
 		297B99931CD8650000BB30CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297B99921CD8650000BB30CE /* AppDelegate.swift */; };
 		297B99951CD8650000BB30CE /* VWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297B99941CD8650000BB30CE /* VWViewController.swift */; };
 		297B99981CD8650000BB30CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297B99961CD8650000BB30CE /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		293FCBA91CDAEF3A00410DED /* VWCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VWCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		297B998F1CD8650000BB30CE /* ITVW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITVW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297B99921CD8650000BB30CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		297B99941CD8650000BB30CE /* VWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				297B99921CD8650000BB30CE /* AppDelegate.swift */,
 				297B99941CD8650000BB30CE /* VWViewController.swift */,
 				29BCFE9B1CD990370020FC34 /* VWCollectionViewController.swift */,
+				293FCBA91CDAEF3A00410DED /* VWCollectionViewFlowLayout.swift */,
 				29BCFE9D1CD995C70020FC34 /* VWCollectionViewCell.swift */,
 				297B99961CD8650000BB30CE /* Main.storyboard */,
 				297B99991CD8650000BB30CE /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 				29BCFE9E1CD995C70020FC34 /* VWCollectionViewCell.swift in Sources */,
 				297B99951CD8650000BB30CE /* VWViewController.swift in Sources */,
 				297B99931CD8650000BB30CE /* AppDelegate.swift in Sources */,
+				293FCBAA1CDAEF3A00410DED /* VWCollectionViewFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
