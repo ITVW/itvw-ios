@@ -50,6 +50,9 @@
                         </connections>
                     </collectionView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="flowLayout" destination="ByP-5n-PCc" id="9Eo-Bf-CDG"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdV-7x-Fa0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

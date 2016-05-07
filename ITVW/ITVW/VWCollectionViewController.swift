@@ -11,6 +11,12 @@ import UIKit
 
 class VWCollectionViewController: UICollectionViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        flowLayout.minimumLineSpacing = 0
+    }
+    
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return hardCodedData().count
