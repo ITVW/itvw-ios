@@ -20,6 +20,11 @@ class VWCollectionViewController: UICollectionViewController {
         flowLayout.minimumLineSpacing = 0
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    // MARK: Collection View Methods
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return hardCodedData().count
     }
