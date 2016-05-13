@@ -72,6 +72,11 @@ class DraggableView: UIView {
         self.backgroundColor = UIColor.whiteColor() // FIXME: Does not need to be in init?
     }
     
+    /*
+        Method checks the state of the provided pan gesture recognizer. For each state change of the recognizer, the scale, rotation transformation, and position properties of the view are updated.
+     
+        - Parameter gestureRecognizer: The current UIPanGestureRecognizer
+    */
     func beingDragged(gestureRecognizer: UIPanGestureRecognizer) -> Void {
         // Points identifying the new location of a view in the coord system of its designated superview.
         xFromCenter = Float(gestureRecognizer.translationInView(self).x)
