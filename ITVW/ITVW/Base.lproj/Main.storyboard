@@ -1,62 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="maM-bI-2Vf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
-        <scene sceneID="nFu-rJ-unU">
+        <!--View Controller-->
+        <scene sceneID="TW2-3o-45Y">
             <objects>
-                <collectionViewController id="maM-bI-2Vf" customClass="VWCollectionViewController" customModule="ITVW" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="3WE-c5-YGa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="K1X-AD-ueo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p73-te-AL6"/>
+                        <viewControllerLayoutGuide type="bottom" id="JEm-6q-gjH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Szn-Vt-kdY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rEQ-39-KYp">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VWCell" id="8H4-gv-uCh" customClass="VWCollectionViewCell" customModule="ITVW" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H6l-EW-fTP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstItem="H6l-EW-fTP" firstAttribute="top" secondItem="8H4-gv-uCh" secondAttribute="topMargin" constant="-8" id="fpS-mi-BlO"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="H6l-EW-fTP" secondAttribute="trailing" constant="-8" id="skk-O9-BAx"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="H6l-EW-fTP" secondAttribute="bottom" constant="-8" id="sw8-bJ-M6u"/>
-                                    <constraint firstItem="H6l-EW-fTP" firstAttribute="leading" secondItem="8H4-gv-uCh" secondAttribute="leadingMargin" constant="-8" id="wLH-0N-5Os"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="vwImageViewCell" destination="H6l-EW-fTP" id="LdM-gs-ACq"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="maM-bI-2Vf" id="Ik3-uM-PoL"/>
-                            <outlet property="delegate" destination="maM-bI-2Vf" id="NVe-iU-EkT"/>
-                        </connections>
-                    </collectionView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="flowLayout" destination="rEQ-39-KYp" id="cy0-sA-Q2j"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OdV-7x-Fa0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29g-75-N48" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514.5" y="358.5"/>
+            <point key="canvasLocation" x="651" y="274"/>
         </scene>
     </scenes>
 </document>

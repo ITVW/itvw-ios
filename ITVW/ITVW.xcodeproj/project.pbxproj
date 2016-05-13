@@ -17,6 +17,9 @@
 		297B99B31CD8650000BB30CE /* ITVWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297B99B21CD8650000BB30CE /* ITVWUITests.swift */; };
 		29BCFE9C1CD990370020FC34 /* VWCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCFE9B1CD990370020FC34 /* VWCollectionViewController.swift */; };
 		29BCFE9E1CD995C70020FC34 /* VWCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BCFE9D1CD995C70020FC34 /* VWCollectionViewCell.swift */; };
+		29BF9FFC1CE585FF00C96AFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BF9FFB1CE585FF00C96AFC /* ViewController.swift */; };
+		29BF9FFE1CE586C200C96AFC /* DraggableViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BF9FFD1CE586C200C96AFC /* DraggableViewBackground.swift */; };
+		29BFA0001CE586E600C96AFC /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BF9FFF1CE586E600C96AFC /* DraggableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		297B99B41CD8650000BB30CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29BCFE9B1CD990370020FC34 /* VWCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VWCollectionViewController.swift; sourceTree = "<group>"; };
 		29BCFE9D1CD995C70020FC34 /* VWCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VWCollectionViewCell.swift; sourceTree = "<group>"; };
+		29BF9FFB1CE585FF00C96AFC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29BF9FFD1CE586C200C96AFC /* DraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewBackground.swift; sourceTree = "<group>"; };
+		29BF9FFF1CE586E600C96AFC /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 				293FCBA91CDAEF3A00410DED /* VWCollectionViewFlowLayout.swift */,
 				29BCFE9D1CD995C70020FC34 /* VWCollectionViewCell.swift */,
 				297B99961CD8650000BB30CE /* Main.storyboard */,
+				29BF9FFD1CE586C200C96AFC /* DraggableViewBackground.swift */,
+				29BF9FFF1CE586E600C96AFC /* DraggableView.swift */,
+				29BF9FFB1CE585FF00C96AFC /* ViewController.swift */,
 				297B99991CD8650000BB30CE /* Assets.xcassets */,
 				297B999B1CD8650000BB30CE /* LaunchScreen.storyboard */,
 				297B999E1CD8650000BB30CE /* Info.plist */,
@@ -265,6 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BF9FFE1CE586C200C96AFC /* DraggableViewBackground.swift in Sources */,
+				29BF9FFC1CE585FF00C96AFC /* ViewController.swift in Sources */,
+				29BFA0001CE586E600C96AFC /* DraggableView.swift in Sources */,
 				29BCFE9C1CD990370020FC34 /* VWCollectionViewController.swift in Sources */,
 				29BCFE9E1CD995C70020FC34 /* VWCollectionViewCell.swift in Sources */,
 				297B99951CD8650000BB30CE /* VWViewController.swift in Sources */,
