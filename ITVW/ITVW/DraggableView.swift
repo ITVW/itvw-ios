@@ -34,13 +34,12 @@ protocol DraggableViewDelegate {
 
 class DraggableView: UIView {
     var delegate: DraggableViewDelegate!
-    var pangestureRecognizer: UIPanGestureRecognizer!
+    var panGestureRecognizer: UIPanGestureRecognizer!
     var originPoint: CGPoint!
     var xFromCenter: Float!
     var yFromCenter: Float!
-    
+    var overlayView: OverlayView!
 //    var information: UILabel!
-//    var overlayView: OverlayView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -53,11 +52,17 @@ class DraggableView: UIView {
         
         // TODO: Add information if necessary here
         
-        // Create and hide the overlay
         // Create new pan gesture recognizer for swiping actions
-        pangestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DraggableView.beingDragged(_:)))
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DraggableView.beingDragged(_:)))
+        self.addGestureRecognizer(panGestureRecognizer)
         
+        // Create and hide the overlay
+        overlayView = OverlayView(frame: CGRectMake(self.frame.size.width/2-100, 0, 100, 100))
+        overlayView.alpha = 0
+        self.addSubview(overlayView)
         
+        xFromCenter = 0
+        yFromCenter = 0
     }
     
     /*
@@ -114,8 +119,8 @@ class DraggableView: UIView {
         }
     }
     
+    // TODO: Create OverlayView class
     func updateOverlay(distance: CGFloat) -> Void {
-        
     }
     
     func afterSwipeAction() -> Void {
