@@ -108,6 +108,17 @@ class DraggableView: UIView {
             break
         }
     }
+    
+    func updateOverlay(distance: CGFloat) -> Void {
+        
+    }
+    
+    func afterSwipeAction() -> Void {
+        
+    }
+    
+    
+    
 }
 
 
