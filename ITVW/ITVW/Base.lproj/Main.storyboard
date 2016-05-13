@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="TW2-3o-45Y">
             <objects>
-                <viewController id="K1X-AD-ueo" sceneMemberID="viewController">
+                <viewController id="K1X-AD-ueo" customClass="ViewController" customModule="ITVW" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p73-te-AL6"/>
                         <viewControllerLayoutGuide type="bottom" id="JEm-6q-gjH"/>
@@ -16,7 +16,6 @@
                     <view key="view" contentMode="scaleToFill" id="Szn-Vt-kdY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29g-75-N48" userLabel="First Responder" sceneMemberID="firstResponder"/>

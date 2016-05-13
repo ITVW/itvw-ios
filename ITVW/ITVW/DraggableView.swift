@@ -47,7 +47,7 @@ class DraggableView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        self.backgroundColor = UIColor.whiteColor() // FIXME: Does not need to be in init?
         self.setupView()
         
         // TODO: Add information if necessary here
@@ -73,8 +73,6 @@ class DraggableView: UIView {
         self.layer.shadowRadius = 3 // The blur radius in points used to render the layer's shadow
         self.layer.shadowOpacity = 0.2 // The opacity of the layer's shadow
         self.layer.shadowOffset = CGSizeMake(1,1) // The offset in points of the layer's shadow (width, height)
-        
-        self.backgroundColor = UIColor.whiteColor() // FIXME: Does not need to be in init?
     }
     
     /*
@@ -119,25 +117,89 @@ class DraggableView: UIView {
         }
     }
     
-    // TODO: Create OverlayView class
+    /*
+        Checks the distance the draggable view has moved on the x-axis, determines if the overlay mode corresponds to left or right, and updates the corresponding overlay image.
+     
+        - Parameter distance: The distance on the x-axis the draggable view has moved
+    */
     func updateOverlay(distance: CGFloat) -> Void {
+        if distance > 0 {
+            // Moving in positive direction = right
+            overlayView.setMode(VWOverlayViewMode.VWOverlayViewModeRight)
+        } else {
+            // Moving in negative direction = left
+            overlayView.setMode(VWOverlayViewMode.VWOverlayViewModeLeft)
+        }
     }
     
+    /*
+        Checks if the draggable view has moved on the x-axis passed either the left (-120) or right (120) swipe action threshold and calls the corresponding action.
+    */
     func afterSwipeAction() -> Void {
-        
+        let floatXFromCenter = Float(xFromCenter)
+        if floatXFromCenter > ACTION_MARGIN { // ACTION_MARGIN = 120
+            self.rightAction()
+        } else if floatXFromCenter < -ACTION_MARGIN {
+            self.leftAction()
+        } else {
+            // TODO: Seems to hide the overlay and...animation?
+            UIView.animateWithDuration(0.3, animations: {() -> Void in
+                self.center = self.originPoint
+                self.transform = CGAffineTransformMakeRotation(0)
+                self.overlayView.alpha = 0
+            })
+        }
     }
     
+    // TODO: Why did they use 500 and -500? View goes off screen?
+    func rightAction() -> Void {
+        let finishPoint: CGPoint = CGPointMake(500, 2 * CGFloat(yFromCenter) + self.originPoint.y)
+        UIView.animateWithDuration(0.3,
+               animations: {
+                self.center = finishPoint
+            }, completion: {
+                (value: Bool) in
+                self.removeFromSuperview()
+        })
+        delegate.cardSwipedRight(self)
+    }
     
+    func leftAction() -> Void {
+        let finishPoint: CGPoint = CGPointMake(-500, 2 * CGFloat(yFromCenter) + self.originPoint.y)
+        UIView.animateWithDuration(0.3,
+               animations: {
+                self.center = finishPoint
+            }, completion: {
+                (value: Bool) in
+                self.removeFromSuperview()
+        })
+        delegate.cardSwipedLeft(self)
+    }
     
+    // TODO: What does click action do?
+    func rightClickAction() -> Void {
+        let finishPoint = CGPointMake(600, self.center.y)
+        UIView.animateWithDuration(0.3,
+               animations: {
+                self.center = finishPoint
+                self.transform = CGAffineTransformMakeRotation(1)
+            }, completion: {
+                (value: Bool) in
+                self.removeFromSuperview()
+        })
+        delegate.cardSwipedRight(self)
+    }
+    
+    func leftClickAction() -> Void {
+        let finishPoint: CGPoint = CGPointMake(-600, self.center.y)
+        UIView.animateWithDuration(0.3,
+               animations: {
+                self.center = finishPoint
+                self.transform = CGAffineTransformMakeRotation(1)
+            }, completion: {
+                (value: Bool) in
+                self.removeFromSuperview()
+        })
+        delegate.cardSwipedLeft(self)
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
