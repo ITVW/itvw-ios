@@ -39,7 +39,7 @@ class DraggableView: UIView {
     var xFromCenter: Float!
     var yFromCenter: Float!
     var overlayView: OverlayView!
-//    var information: UILabel!
+    var vaporwaveImageView: UIImageView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -50,11 +50,15 @@ class DraggableView: UIView {
         self.backgroundColor = UIColor.whiteColor() // FIXME: Does not need to be in init?
         self.setupView()
         
+        // Add image view to hold images
+        vaporwaveImageView = UIImageView(frame: CGRectMake(0,50,290,386))
+        
         // TODO: Add information if necessary here
         
         // Create new pan gesture recognizer for swiping actions
         panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DraggableView.beingDragged(_:)))
-        self.addGestureRecognizer(panGestureRecognizer)
+        self.addGestureRecognizer(panGestureRecognizer) 
+        self.addSubview(vaporwaveImageView)
         
         // Create and hide the overlay
         overlayView = OverlayView(frame: CGRectMake(self.frame.size.width/2-100, 0, 100, 100))
