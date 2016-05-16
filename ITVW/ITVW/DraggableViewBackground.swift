@@ -20,7 +20,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var checkButton: UIButton!
     
     // Card Info
-    var exampleCardLabels: [String]!
+    var vaporwaveImages: [[String: AnyObject]]!
     var allCards: [DraggableView]!
     var cardsLoadedIndex: Int!
     var loadedCards: [DraggableView]!
@@ -34,9 +34,19 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         super.init(frame: frame)
         super.layoutSubviews()
         setupViews()
+        
+        // Load vaporwave image data
+        vaporwaveImages = hardCodedVaporwaveData()
+        
+        allCards = []
+        loadedCards = []
+        cardsLoadedIndex = 0
+//        self.loadCards()
     }
     
+    // TODO: Probably want to use Storyboard later
     func setupViews() -> Void {
+        // Set view background color to a gray
         self.backgroundColor = UIColor(red: 0.92, green: 0.93, blue: 0.95, alpha: 1)
         
         // Create the x button and apply the swipeLeft action
@@ -54,17 +64,50 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     }
     
     // MARK: Load cards
-    
+//    func loadCards() -> Void {
+//        if vaporwaveImages.count > 0 {
+//            let numLoadedCardsCap = exampleCardLabels.count > MAX_BUFFER_SIZE ? MAX_BUFFER_SIZE : vaporwaveImages.count
+//            for var i = 0; i < exampleCardLabels.count; i++ {
+//                let newCard: DraggableView = self.createDraggableViewWithDataAtIndex(i)
+//                allCards.append(newCard)
+//                if i < numLoadedCardsCap {
+//                    loadedCards.append(newCard)
+//                }
+//            }
+//            
+//            for var i = 0; i < loadedCards.count; i++ {
+//                if i > 0 {
+//                    self.insertSubview(loadedCards[i], belowSubview: loadedCards[i - 1])
+//                } else {
+//                    self.addSubview(loadedCards[i])
+//                }
+//                cardsLoadedIndex = cardsLoadedIndex + 1
+//            }
+//        }
+//    }
     
     
     // MARK: DraggableViewDelegate methods
-    func cardSwipedLeft(card: UIView) {
+    func cardSwipedLeft(card: UIView) -> Void {
+        loadedCards.removeAtIndex(0)
         
+        if cardsLoadedIndex < allCards.count {
+            loadedCards.append(allCards[cardsLoadedIndex])
+            cardsLoadedIndex = cardsLoadedIndex + 1
+            self.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
+        }
     }
     
-    func cardSwipedRight(card: UIView) {
+    func cardSwipedRight(card: UIView) -> Void {
+        loadedCards.removeAtIndex(0)
         
+        if cardsLoadedIndex < allCards.count {
+            loadedCards.append(allCards[cardsLoadedIndex])
+            cardsLoadedIndex = cardsLoadedIndex + 1
+            self.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
+        }
     }
+    
     
     func swipeLeft() -> Void {
         
@@ -73,4 +116,24 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     func swipeRight() -> Void {
         
     }
+    
+    // MARK: Vaporwave data
+    func hardCodedVaporwaveData() ->[[String: AnyObject]] {
+        return [
+            [
+                "image": "vw1",
+            ], [
+                "image": "vw2",
+            ], [
+                "image": "vw3",
+            ], [
+                "image": "vw4",
+            ], [
+                "image": "vw5",
+            ], [
+                "image": "vw6",
+            ]
+        ]
+    }
+
 }

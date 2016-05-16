@@ -52,6 +52,7 @@ class DraggableView: UIView {
         
         // Add image view to hold images
         vaporwaveImageView = UIImageView(frame: CGRectMake(0,50,290,386))
+        vaporwaveImageView.backgroundColor = UIColor.blueColor() // TEST
         
         // TODO: Add information if necessary here
         
